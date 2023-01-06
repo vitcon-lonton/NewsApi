@@ -18,7 +18,9 @@ class NewsApi {
     dioOptions ??= BaseOptions();
     dioOptions.responseType = ResponseType.json;
     dioOptions.contentType = Headers.jsonContentType;
-    dioOptions.headers['Authorization'] = _apiKey;
+    // Update from header from 'Authorization' to 'X-Api-Key'
+    // see more: https://newsapi.org/docs/authentication
+    dioOptions.headers['X-Api-Key'] = _apiKey;
 
     _dio = Dio(dioOptions);
 
@@ -49,7 +51,7 @@ class NewsApi {
   /// you can change the key at any time
   set apiKey(key) {
     _apiKey = key;
-    _dio.options.headers['Authorization'] = key;
+    _dio.options.headers['X-Api-Key'] = key;
   }
 
   String get apiKey => _apiKey;
