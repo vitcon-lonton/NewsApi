@@ -15,7 +15,7 @@ class Article with EquatableMixin {
   DateTime publishedAt;
   String title;
   String url;
-  String urlToImage;
+  String? urlToImage;
 
   Article({
     required this.source,
@@ -25,7 +25,7 @@ class Article with EquatableMixin {
     required this.publishedAt,
     required this.title,
     required this.url,
-    required this.urlToImage,
+    this.urlToImage,
   });
 
   @override
