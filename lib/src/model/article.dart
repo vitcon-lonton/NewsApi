@@ -10,7 +10,7 @@ part 'article.g.dart';
 class Article with EquatableMixin {
   Source source;
   String? author;
-  String content;
+  String? content;
   String description;
   DateTime publishedAt;
   String title;
@@ -19,8 +19,8 @@ class Article with EquatableMixin {
 
   Article({
     required this.source,
-    required this.author,
-    required this.content,
+    this.author,
+    this.content,
     required this.description,
     required this.publishedAt,
     required this.title,
