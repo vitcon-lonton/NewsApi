@@ -10,7 +10,7 @@ Article _$ArticleFromJson(Map<String, dynamic> json) => Article(
       source: Source.fromJson(json['source'] as Map<String, dynamic>),
       author: json['author'] as String?,
       content: json['content'] as String?,
-      description: json['description'] as String,
+      description: json['description'] as String?,
       publishedAt: DateTime.parse(json['publishedAt'] as String),
       title: json['title'] as String,
       url: json['url'] as String,

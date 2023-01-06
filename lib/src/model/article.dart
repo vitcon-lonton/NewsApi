@@ -11,7 +11,7 @@ class Article with EquatableMixin {
   Source source;
   String? author;
   String? content;
-  String description;
+  String? description;
   DateTime publishedAt;
   String title;
   String url;
@@ -21,7 +21,7 @@ class Article with EquatableMixin {
     required this.source,
     this.author,
     this.content,
-    required this.description,
+    this.description,
     required this.publishedAt,
     required this.title,
     required this.url,
